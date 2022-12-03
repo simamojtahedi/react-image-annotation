@@ -14,10 +14,10 @@ var _extends =
 
 var _templateObject = _taggedTemplateLiteralLoose(
   [
-    "\n  background: white;\n  border-radius: 2px;\n  box-shadow:\n    0px 1px 5px 0px rgba(0, 0, 0, 0.2),\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14),\n    0px 3px 1px -2px rgba(0, 0, 0, 0.12);\n  padding: 8px 16px;\n  margin-top: 8px;\n  margin-left: -50%;\n  margin-right: 50%;\n  color: #363636!important;\n",
+    "\n  background: white;\n opacity: .95;\n   border-radius: 2px;\n  box-shadow:\n    0px 1px 5px 0px rgba(0, 0, 0, 0.2),\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14),\n    0px 3px 1px -2px rgba(0, 0, 0, 0.12);\n  padding: 4px 8px;\n  color: #363636!important;\n",
   ],
   [
-    "\n  background: white;\n  border-radius: 2px;\n  box-shadow:\n    0px 1px 5px 0px rgba(0, 0, 0, 0.2),\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14),\n    0px 3px 1px -2px rgba(0, 0, 0, 0.12);\n  padding: 8px 16px;\n  margin-top: 8px;\n  margin-left: -50%;\n  margin-right: 50%;\n  color: #363636!important;\n",
+    "\n  background: white;\n opacity: .95;\n   border-radius: 2px;\n  box-shadow:\n    0px 1px 5px 0px rgba(0, 0, 0, 0.2),\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14),\n    0px 3px 1px -2px rgba(0, 0, 0, 0.12);\n  padding: 4px 8px;\n  color: #363636!important;\n",
   ]
 );
 
@@ -54,29 +54,39 @@ function Content(props) {
           // zIndex: 999,
 
           left: geometry.type === PolygonSelector.TYPE ? getHorizontallyCentralPoint(geometry.points) + "%" : geometry.x + "%",
-          top: geometry.type === PolygonSelector.TYPE ? getVerticallyLowestPoint(geometry.points) + "%" : geometry.y + geometry.height + "%",
-          zIndex: 9999,
-          pointerEvents: "none",
+          top: geometry.type === PolygonSelector.TYPE ? getVerticallyLowestPoint(geometry.points) + "%" : geometry.y + "%",
+          zIndex: 999,
         },
         props.style
       ),
-      className: `my_label ${props.className}`,
+      className: `shape_label ${props.className}`,
       geometry: geometry,
     },
     React.createElement(
       Container,
       {
         style: {
-          fontSize: 1 / 5 + zoomBetweenZeroAndOne * (4 / 5) + "rem",
-          padding:
-            (1 / 5) * 8 +
-            (4 / 5) * 8 * zoomBetweenZeroAndOne +
-            "px " +
-            ((1 / 5) * 16 + (4 / 5) * 16 * zoomBetweenZeroAndOne) +
-            "px",
+          fontSize: '.8rem',
+          lineHeight: 1,
         },
       },
-      props.annotation.data && props.annotation.data.text
+      props.annotation.data && props.annotation.data.text,
+      React.createElement(
+        'span',
+        {
+          className: `shape_label_delete`,
+          id: `shape_label_${props.annotation.data.id}`,
+        },
+        '⨯'
+      ),
+      React.createElement(
+        'span',
+        {
+          className: `shape_label_edit`,
+          id: `shape_label_${props.annotation.data.id}`,
+        },
+        '✎'
+      )
     )
   );
 }
