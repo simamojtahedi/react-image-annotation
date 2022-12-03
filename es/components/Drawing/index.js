@@ -12,7 +12,10 @@ function Drawing(props) {
       width: "100%",
       viewBox: "0 0 " + geometry.size.width + " " + geometry.size.height,
       className: props.className,
-      style: { position: "absolute" },
+      style: { 
+        position: "absolute",
+        top: 0
+      },
     },
     geometry.lines.map(function (l, i) {
       return React.createElement("polyline", {
