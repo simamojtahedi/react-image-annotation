@@ -98,11 +98,11 @@ function Polygon(props) {
             to: "linesContainer",
             toAnchor: prevItem.x + "% " + prevItem.y + "%",
             borderColor: "#14ff4f",
-            borderStyle: "dashed",
+            borderStyle: "solid",
             borderWidth: 3,
             className: !props.active
-              ? "Polygon-LineTo"
-              : "Polygon-LineToActive",
+              ? "annotation_label Polygon-LineTo"
+              : "annotation_label Polygon-LineToActive",
             id: `annotation_label_${props.annotation.data?.id}`,
           })
         );
