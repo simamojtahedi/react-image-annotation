@@ -171,11 +171,11 @@ export default {
 
     switch (type) {
       case PointSelector.TYPE:
-        return React.createElement(Overlay, null, "برای شروع کلیک کنید");
+        return React.createElement(Overlay, null, "");
       case PolygonSelector.TYPE:
-        return React.createElement(Overlay, null, "برای افزودن نقطه کلیک کنید");
+        return React.createElement(Overlay, null, "");
       default:
-        return React.createElement(Overlay, null, "کلیک کرده و موس را بکشید");
+        return React.createElement(Overlay, null, "");
     }
   },
 };
