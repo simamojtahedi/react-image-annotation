@@ -454,10 +454,10 @@ export default compose(
                     { style: { pointerEvents: "all" } },
                     props.annotations.map(function (annotation) {
                       return (
-                        _this3.shouldAnnotationBeActive(
-                          annotation,
-                          topAnnotationAtMouse
-                        ) &&
+                        // _this3.shouldAnnotationBeActive(
+                        //   annotation,
+                        //   topAnnotationAtMouse
+                        // ) &&
                         renderContent({
                           key: annotation.data.id,
                           annotation: annotation,
