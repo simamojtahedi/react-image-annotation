@@ -22,7 +22,7 @@ function Highlighter(props) {
       id: `annotation_label_${props.annotation.data?.id}`,
       fill: "rgba(0,0,0,.1)",
       stroke: "#ffe000a6",
-      strokeWidth: "6px",
+      strokeWidth: "9px",
       points: geometry.points
         .map(function (e) {
           return e.x + "," + e.y;
