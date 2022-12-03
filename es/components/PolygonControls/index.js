@@ -84,6 +84,7 @@ function PolygonControls(props) {
             getVerticallyLowestPoint(geometry.points) +
             (10 * (1 / 5) + 10 * (4 / 5) * zoomBetweenZeroAndOne) +
             "%",
+          zIndex: '11 !important',
         },
         props.style
       ),
