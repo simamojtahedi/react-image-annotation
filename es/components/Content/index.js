@@ -49,14 +49,18 @@ function Content(props) {
       style: _extends(
         {
           position: "absolute",
-          left: `${props.mouse.x}%`,
-          top: `${props.mouse.y}%`,
-          zIndex: 999,
+          // left: `${props.mouse.x}%`,
+          // top: `${props.mouse.y}%`,
+          // zIndex: 999,
+
+          left: geometry.type === PolygonSelector.TYPE ? getHorizontallyCentralPoint(geometry.points) + "%" : geometry.x + "%",
+          top: geometry.type === PolygonSelector.TYPE ? getVerticallyLowestPoint(geometry.points) + "%" : geometry.y + geometry.height + "%",
+          zIndex: 9999,
           pointerEvents: "none",
         },
         props.style
       ),
-      className: props.className,
+      className: `my_label ${props.className}`,
       geometry: geometry,
     },
     React.createElement(
