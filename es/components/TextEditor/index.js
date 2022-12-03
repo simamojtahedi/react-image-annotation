@@ -34,7 +34,7 @@ function TextEditor(props) {
     React.createElement(
       Inner,
       null,
-      React.createElement("textarea", {
+      React.createElement("input", {
         placeholder: "عنوان",
         onFocus: props.onFocus,
         onBlur: props.onBlur,

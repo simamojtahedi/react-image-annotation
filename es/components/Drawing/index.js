@@ -17,8 +17,8 @@ function Drawing(props) {
     geometry.lines.map(function (l, i) {
       return React.createElement("polyline", {
         key: "p-" + i,
-        fill: "none",
-        stroke: "black",
+        fill: "rgba(0,0,0,.2)",
+        stroke: "#14ff4f",
         strokeWidth: "4px",
         className: `annotation_label`,
         points: l
@@ -29,8 +29,8 @@ function Drawing(props) {
       });
     }),
     React.createElement("polyline", {
-      fill: "none",
-      stroke: "black",
+      fill: "rgba(0,0,0,.2)",
+      stroke: "#14ff4f",
       strokeWidth: "4px",
       points: geometry.points
         .map(function (e) {
