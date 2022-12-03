@@ -14,10 +14,10 @@ var _extends =
 
 var _templateObject = _taggedTemplateLiteralLoose(
   [
-    "\n  background: #14ff4f;\n  border-radius: 1px;\n  width: 2px;\n  height: 2px;\n  margin-left: -1px;\n  margin-top: -1px;\n  position: absolute;\n",
+    "\n  background: #fff;\n  border-radius: 50%;\n  box-shadow: 0 0 5px rgba(0, 0, 0, .4);\n  border: 2px solid #14ff4f;\n  width: 8px;\n  height: 8px;\n  margin-left: -1px;\n  margin-top: -1px;\n  position: absolute;\n",
   ],
   [
-    "\n  background: #14ff4f;\n  border-radius: 1px;\n  width: 2px;\n  height: 2px;\n  margin-left: -1px;\n  margin-top: -1px;\n  position: absolute;\n",
+    "\n  background: #fff;\n  border-radius: 50%;\n  box-shadow: 0 0 5px rgba(0, 0, 0, .4);\n  border: 2px solid #14ff4f;\n  width: 8px;\n  height: 8px;\n  margin-left: -1px;\n  margin-top: -1px;\n  position: absolute;\n",
   ]
 );
 
