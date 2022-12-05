@@ -35,6 +35,7 @@ function Drawing(props) {
       fill: "rgba(0,0,0,.2)",
       stroke: "#14ff4f",
       strokeWidth: "4px",
+      className: `annotation_label`,
       points: geometry.points
         .map(function (e) {
           return e.x + "," + e.y;
